@@ -1,0 +1,28 @@
+name: qr_code_demo
+description: A Flutter project to manage QR Codes.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.3
+
+  image_picker: ^0.8.4+1
+  google_ml_vision: ^0.0.7
+  path_provider: ^2.0.4
+  pretty_qr_code: ^2.0.2
+  qr_code_scanner: ^0.5.2
+  share_plus: ^2.1.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
