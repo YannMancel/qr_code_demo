@@ -52,7 +52,6 @@ class _ScanPageState extends State<ScanPage> {
             ),
           ),
           Expanded(
-            flex: 1,
             child: Center(
               child: (result != null)
                   ? Text(

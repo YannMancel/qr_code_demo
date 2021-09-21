@@ -2,7 +2,7 @@ import 'dart:typed_data' show Uint8List;
 
 import 'package:flutter/material.dart';
 
-import '../image_tools.dart';
+import '../image_mixin.dart';
 import '../widgets/preview.dart';
 import '../widgets/qr_code.dart';
 import '../widgets/wrapper.dart';
@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> with ImageMixin {
     await showDialog<void>(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('QR Code'),
+        title: const Text('QR Code'),
         content: Text('$rawValues'),
         actions: <Widget>[
           TextButton(
@@ -87,11 +87,11 @@ class _HomePageState extends State<HomePage> with ImageMixin {
                 : Preview(imageInMemory: _imageInMemory!),
             ElevatedButton(
               onPressed: () => _launchScanView(context: context),
-              child: Text('Launch scan view'),
+              child: const Text('Launch scan view'),
             ),
             ElevatedButton(
               onPressed: () => _searchQRCode(context: context),
-              child: Text('Search QR Code'),
+              child: const Text('Search QR Code'),
             ),
           ],
         ),

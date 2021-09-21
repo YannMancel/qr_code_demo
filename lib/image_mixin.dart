@@ -76,12 +76,12 @@ mixin ImageMixin {
       if (file == null) return;
 
       await Share.shareFiles(
-        [file.path],
+        <String>[file.path],
         subject: 'QR Code Share',
         text: 'QR Code of user',
       );
     } catch (e) {
-      return null;
+      return;
     }
   }
 
@@ -103,7 +103,7 @@ mixin ImageMixin {
 
     final barcodeDetector = GoogleVision.instance.barcodeDetector();
     final barcodes = await barcodeDetector.detectInImage(visionImage);
-    barcodeDetector.close();
+    await barcodeDetector.close();
 
     return barcodes.map((e) => e.rawValue).toList(growable: false);
   }
